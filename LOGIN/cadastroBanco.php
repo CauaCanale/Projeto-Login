@@ -1,7 +1,6 @@
 <?php
 
  
-
 $usuario_form = $_POST['usuario'];
 $senha_form = $_POST['senha'];
 

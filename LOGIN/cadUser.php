@@ -22,7 +22,11 @@
     }
 
     button[type="submit"] {
-        margin-top: 20px;  
+        margin-top: 20px;
+    }
+
+    h1 {
+        margin-top: 50px;
     }
 </style>
 
@@ -37,44 +41,47 @@
         <label class="form-label"></label>
         <input type="text" placeholder="Nome e Sobrenome:" class="form-control" name="nome">
 
-        
-            <div class="row mb-1">
-                <div class="col">
-                    <label class="form-label"></label>
-                    <input type="number" placeholder="Ano Nascimento:" class="form-control" name="ano_nascimento">
-                </div>
 
-                <div class="col">
-                    <label class="form-label"></label>
-                    <input type="number" placeholder="Telefone:" class="form-control" name="telefone_1">
-                </div>
-
-                <div class="col">
-                    <label class="form-label"></label>
-                    <input type="number" placeholder="CPF:" class="form-control" name="cpf">
-                </div>
+        <div class="row mb-1">
+            <div class="col">
+                <label class="form-label"></label>
+                <input type="number" placeholder="Ano Nascimento:" class="form-control" name="ano_nascimento">
             </div>
 
-            <label class="form-label"></label>
-            <input type="text" placeholder="Logradouro:" class="form-control" name="logradouro">
+            <div class="col">
+                <label class="form-label"></label>
+                <input type="number" placeholder="Telefone:" class="form-control" name="telefone_1">
+            </div>
+
+            <div class="col">
+                <label class="form-label"></label>
+                <input type="number" placeholder="CPF:" class="form-control" name="cpf">
+            </div>
+        </div>
+
+        <label class="form-label"></label>
+        <input type="text" placeholder="Logradouro:" class="form-control" name="logradouro">
+
+        <div class="row mb-1">
+            <div class="col">
+                <label class="form-label"></label>
+                <input type="number" placeholder="Numero Residência:" class="form-control" name="n_casa">
+            </div>
+
+            <div class="col">
+                <label class="form-label"></label>
+                <input type="text" placeholder="Bairro:" class="form-control" name="bairro">
+            </div>
+        </div>
+
+        <label class="form-label"></label>
+        <input type="text" placeholder="Cidade:" class="form-control" name="cidade">
 
 
-            <label class="form-label"></label>
-            <input type="number" placeholder="Numero Residência:" class="form-control" name="n_casa">
+        <label class="form-label"></label>
+        <input type="password" placeholder="Senha:" class="form-control" name="senha">
 
-
-            <label class="form-label"></label>
-            <input type="text" placeholder="Bairro:" class="form-control" name="bairro">
-
-
-            <label class="form-label"></label>
-            <input type="text" placeholder="Cidade:" class="form-control" name="cidade">
-
-
-            <label class="form-label"></label>
-            <input type="password" placeholder="Senha:" class="form-control" name="senha">
-
-            <button type="submit" class="btn btn-success">Cadastrar-se</button>
+        <button type="submit" class="btn btn-success">Cadastrar-se</button>
     </form>
 </body>
 

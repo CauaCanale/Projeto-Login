@@ -29,6 +29,10 @@
     button[type="submit"]{
         margin-top: 20px;
     }
+
+    h1{
+        margin-top: 50px;
+    }
 </style>
 
 <body>
@@ -46,7 +50,7 @@
         
         <a class="btn btn-primary" href="cadUser.php">Cadastrar-se</a>
 
-        <a class="btn btn-warning   " href="esqueciSenha.php">Esqueceu a senha? clique aqui </a>
+        <a class="btn btn-warning" href="esqueciSenha.php">Esqueceu a senha? clique aqui </a>
     </form>
 
 </body>

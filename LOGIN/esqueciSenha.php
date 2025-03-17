@@ -24,6 +24,10 @@
     button[type="submit"] {
         margin-top: 20px;  
     }
+
+    h1{
+        margin-top: 50px;
+    }
 </style>
 
 <body>
