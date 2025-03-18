@@ -46,10 +46,13 @@ $dados = $banco->query($select)->fetch();
 
 <body>
 
-    <form>
+    <form action="./banco_editar.php" method="POST">
         <input type="hidden" name="id" value="<?= $dados['id'] ?>">
 
         <h1>Editar Informações</h1>
+
+        <label class="form-label"></label>
+        <input type="text" placeholder="Usuario:" class="form-control" name="usuario" value="<?= $dados['usuario'] ?>" disabled>
 
         <label class="form-label"></label>
         <input type="text" placeholder="Nome e Sobrenome:" class="form-control" name="nome" value="<?= $dados['nome'] ?>" disabled>
@@ -63,7 +66,7 @@ $dados = $banco->query($select)->fetch();
 
             <div class="col">
                 <label class="form-label"></label>
-                <input type="number" placeholder="Telefone:" class="form-control" name="telefone_1" value="<?= $dados['telefone_1'] ?>" disabled>
+                <input type="number" placeholder="Telefone:" class="form-control" name="telefone_1" value="<?= $dados['telefone_1'] ?>" required>
             </div>
 
             <div class="col">
@@ -73,26 +76,26 @@ $dados = $banco->query($select)->fetch();
         </div>
 
         <label class="form-label"></label>
-        <input type="text" placeholder="Logradouro:" class="form-control" name="logradouro" value="<?= $dados['logradouro'] ?>" disabled>
+        <input type="text" placeholder="Logradouro:" class="form-control" name="logradouro" value="<?= $dados['logradouro'] ?>" required>
 
         <div class="row mb-1">
             <div class="col">
                 <label class="form-label"></label>
-                <input type="number" placeholder="Numero Residência:" class="form-control" name="n_casa" value="<?= $dados['n_casa'] ?>" disabled>
+                <input type="number" placeholder="Numero Residência:" class="form-control" name="n_casa" value="<?= $dados['n_casa'] ?>" required>
             </div>
 
             <div class="col">
                 <label class="form-label"></label>
-                <input type="text" placeholder="Bairro:" class="form-control" name="bairro" value="<?= $dados['bairro'] ?>" disabled>
+                <input type="text" placeholder="Bairro:" class="form-control" name="bairro" value="<?= $dados['bairro'] ?>" required>
             </div>
         </div>
 
         <label class="form-label"></label>
-        <input type="text" placeholder="Cidade:" class="form-control" name="cidade" value="<?= $dados['cidade'] ?>" disabled>
+        <input type="text" placeholder="Cidade:" class="form-control" name="cidade" value="<?= $dados['cidade'] ?>" required>
 
 
         <label class="form-label"></label>
-        <input type="password" placeholder="Senha:" class="form-control" name="senha" value="<?= $dados['senha'] ?>">
+        <input type="password" placeholder="Senha:" class="form-control" name="senha" value="<?= $dados['senha'] ?>" required>
 
         <a href="listarUsuario.php" class="btn btn-primary mt-3">Salvar Alterações</a>
     </form>

@@ -41,10 +41,10 @@
         <h1>Login</h1>
 
         <label class="form-label">Usuario:</label>
-        <input type="text" class="form-control" name="user">
+        <input type="text" class="form-control" name="user" required>
 
         <label class="form-label">Senha:</label>
-        <input type="password" class="form-control" name="password">
+        <input type="password" class="form-control" name="password" required>
         
         <button type="submit" class="btn btn-success">Entrar</button>
         

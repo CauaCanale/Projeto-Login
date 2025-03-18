@@ -35,10 +35,10 @@
         <h1>Esqueci a Senha</h1>
 
         <label class="form-label"></label>
-        <input type="text" placeholder="Usuario:" class="form-control">
+        <input type="text" placeholder="Usuario:" class="form-control" required>
 
         <label class="form-label"></label>
-        <input type="number" placeholder="CPF:" class="form-control">
+        <input type="number" placeholder="CPF:" class="form-control" required>
 
         <button type="submit" class="btn btn-success">Enviar</button>
 

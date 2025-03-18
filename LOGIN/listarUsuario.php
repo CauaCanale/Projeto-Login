@@ -18,10 +18,10 @@ $resultado = $banco->query($select)->fetchAll();
 main class="container my-5">
     <table class="table table-striped">    
         <tr>
-            <td>id</td>
-            <td>usuario</td>
-            <td>id_pessoa</td>
-            <td class="text-center">Ações</td>
+            <td>ID</td>
+            <td>USUARIO</td>
+            <td>ID_PESSOA</td>
+            <td class="text-center">AÇÕES</td>
         </tr>
 
         <?php foreach ($resultado as $linha) {  ?>
