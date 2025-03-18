@@ -17,7 +17,7 @@ $consultaUsuarioSenha = 'SELECT * FROM tb_usuario WHERE usuario = "' . $userForm
 $resultado = $banco->query($consultaUsuarioSenha)->fetch();
 
 if (!empty($resultado) && $resultado != false){
-    header('location:listarUsuario.php');
+    header('location:lista_usuario.php');
 }
 else{
     header('location:index.php');

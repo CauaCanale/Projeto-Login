@@ -1,17 +1,15 @@
-<?php
+<?php 
 
-var_dump($_POST);
+$editar_id = $_POST['id'];
+$editar_senha = $_POST['senha'];
 
-$editarId = $_POST['id'];
-$editarNome = $_POST['nome'];
-$editarAno_nasc = $_POST['ano_nascimento'];
-$editarCpf = $_POST['cpf'];
-$editarTelefone = $_POST['Telefone_1'];
-$editarLogradouro = $_POST['logradouro'];
-$editar_numero_casa = $_POST['n_casa'];
-$editarBairro = $_POST['bairro'];
-$editarCidade = $_POST['cidade'];
-
+// Dados da tb_pessoa
+$editar_tel_1 = $_POST['telefone_1'];
+$editar_tel_2 = $_POST['telefone_2'];
+$editar_logradouro = $_POST['logradouro'];
+$editar_n_casa = $_POST['n_casa'];
+$editar_bairro = $_POST['bairro'];
+$editar_cidade = $_POST['cidade'];
 
 $dsn = 'mysql:dbname=db_login;host=127.0.0.1';
 $user = 'root';
@@ -19,31 +17,28 @@ $password = '';
 
 $banco = new PDO($dsn, $user, $password);
 
-$update = 'UPDATE tb_usuario SET usuario = :usuario, senha = :senha  WHERE id = :id';
+// Atualizando a senha no banco de dados
+$update = 'UPDATE tb_usuario SET senha = :senha WHERE id = :id';
 
-$box = $banco->prepare($update);
-
-$box->execute([ 
-    ':id' => $editarId,
-    ':usuario' => $editarUsuario,
-    ':senha' => $editarSenha
+$banco->prepare($update)->execute([
+    ':senha' => $editar_senha,
+    ':id' => $editar_id
 ]);
 
-$update = 'UPDATE tb_pessoa SET telefone = :telefone_1, logradouro = :logradouro, n_casa = :n_casa, bairro = :bairro, cidade = :cidade   WHERE id_pessoa = :id';
+// Atualizando os dados na tb_pessoa
+$update = 'UPDATE tb_pessoa SET telefone_1 = :tel_1, telefone_2 = :tel_2, logradouro = :logradouro, n_casa = :numero_casa, bairro = :bairro_form, cidade = :cidade_form WHERE id = :id';
 
-$box = $banco->prepare($update);
-
-$box->execute([
-    ':id' => $editarId,
-    ':telefone_1' => $editarTelefone,
-    ':logradouro' => $editarLogradouro,
-    ':n_casa' =>     $editar_numero_casa,
-    ':bairro' =>     $bairro,
-    ':cidade' =>     $cidade
-    
+$banco->prepare($update)->execute([
+    ':tel_1' => $editar_tel_1,
+    ':tel_2' => $editar_tel_2,
+    ':logradouro' => $editar_logradouro,
+    ':numero_casa' => $editar_n_casa,
+    ':bairro_form' => $editar_bairro,
+    ':cidade_form' => $editar_cidade,
+    ':id' => $editar_id
 ]);
 
-echo '<script> 
-alert("Usuario editado com Sucesso!") 
-window.location.replace("user_info.php")
-</script>';
+echo "<script>
+        alert('Dados Alterados com sucesso!');
+        window.location.href='lista_usuario.php';
+    </script>";

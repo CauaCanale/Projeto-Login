@@ -21,5 +21,5 @@ $banco->query($delete_pessoa);
 
 echo '<script> 
 alert("Usuario apagado com Sucesso!"); 
-window.location.replace("index.php");
+window.location.replace("lista_usuario.php");
 </script>';

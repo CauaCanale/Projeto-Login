@@ -30,9 +30,9 @@ main class="container my-5">
                 <td><?= $linha['usuario'] ?></td>
                 <td><?= $linha['id_pessoa'] ?></td>
                 <td class="text-center">
-                    <a href="./user_info.php?id_pessoa=<?= $linha['id'] ?>" class="btn btn-primary">Abrir</a>
-                    <a href="./user_info.php?id_pessoa=<?= $linha['id'] ?>" class="btn btn-warning">Editar</a>
-                    <a href="./user_deletar.php?id=<?= $linha['id'] ?>" class="btn btn-danger">Excluir</a>
+                    <a href="./formulario_informacoes.php?id_pessoa=<?= $linha['id'] ?>" class="btn btn-primary">Abrir</a>
+                    <a href="./formulario_editar.php?id_pessoa=<?= $linha['id_pessoa'] ?>" class="btn btn-warning">Editar</a>
+                    <a href="./formulario_deletar.php?id=<?= $linha['id'] ?>" class="btn btn-danger">Excluir</a>
                 </td>
             </tr>
         <?php } ?>

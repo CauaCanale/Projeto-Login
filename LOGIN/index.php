@@ -48,7 +48,7 @@
         
         <button type="submit" class="btn btn-success">Entrar</button>
         
-        <a class="btn btn-primary" href="cadUser.php">Cadastrar-se</a>
+        <a class="btn btn-primary" href="cadastro_usuario.php">Cadastrar-se</a>
 
         <a class="btn btn-warning" href="esqueciSenha.php">Esqueceu a senha? clique aqui </a>
     </form>
