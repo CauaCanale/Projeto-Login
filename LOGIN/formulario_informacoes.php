@@ -52,58 +52,60 @@ $dados = $banco->query($select)->fetch();
 
         <h1>Editar Informações</h1>
 
-        <label class="form-label"></label>
+        <label class="form-label">Usuario</label>
         <input type="text" placeholder="Usuario:" class="form-control" name="usuario" value="<?= $dados['usuario'] ?>" disabled>
 
-        <label class="form-label"></label>
+        <label class="form-label">Nome e Sobrenome</label>
         <input type="text" placeholder="Nome e Sobrenome:" class="form-control" name="nome" value="<?= $dados['nome'] ?>" disabled>
 
 
         <div class="row mb-1">
             <div class="col">
-                <label class="form-label"></label>
-                <input type="number" placeholder="Ano Nascimento:" class="form-control" name="ano_nascimento" value="<?= $dados['ano_nascimento'] ?>" disabled>
-            </div>
-
-            <div class="col">
-                <label class="form-label"></label>
+                <label class="form-label">Telefone 1</label>
                 <input type="number" placeholder="Telefone 1:" class="form-control" name="telefone_1" value="<?= $dados['telefone_1'] ?>" disabled>
             </div>
 
             <div class="col">
-                <label class="form-label"></label>
+                <label class="form-label">telefone 2</label>
                 <input type="number" placeholder="Telefone 2:" class="form-control" name="telefone_2" value="<?= $dados['telefone_2'] ?>" disabled>
-            </div>
-
-            <div class="col">
-                <label class="form-label"></label>
-                <input type="number" placeholder="CPF:" class="form-control" name="cpf" value="<?= $dados['cpf'] ?>" disabled>
             </div>
         </div>
 
-        <label class="form-label"></label>
+        <div class="row mb-1">
+            <div class="col">
+                <label class="form-label">Ano Nascimento</label>
+                <input type="number" placeholder="Ano Nascimento:" class="form-control" name="ano_nascimento" value="<?= $dados['ano_nascimento'] ?>" disabled>
+            </div>
+
+            <div class="col">
+                <label class="form-label">CPF</label>
+                <input type="number" placeholder="CPF:" class="form-control" name="cpf" value="<?= $dados['cpf'] ?>" disabled>
+            </div>
+            </div>
+
+        <label class="form-label">Logradouro</label>
         <input type="text" placeholder="Logradouro:" class="form-control" name="logradouro" value="<?= $dados['logradouro'] ?>" disabled>
 
         <div class="row mb-1">
             <div class="col">
-                <label class="form-label"></label>
+                <label class="form-label">Numero Residência</label>
                 <input type="number" placeholder="Numero Residência:" class="form-control" name="n_casa" value="<?= $dados['n_casa'] ?>" disabled>
             </div>
 
             <div class="col">
-                <label class="form-label"></label>
-                <input type="text" placeholder="Bairro:" class="form-control" name="bairro" value="<?= $dados['bairro'] ?>">
+                <label class="form-label">Bairro</label>
+                <input type="text" placeholder="Bairro:" class="form-control" name="bairro" value="<?= $dados['bairro'] ?>"disabled>
             </div>
         </div>
 
-        <label class="form-label"></label>
+        <label class="form-label">Cidade</label>
         <input type="text" placeholder="Cidade:" class="form-control" name="cidade" value="<?= $dados['cidade'] ?>" disabled>
 
 
-        <label class="form-label"></label>
+        <label class="form-label">Senha</label>
         <input type="password" placeholder="Senha:" class="form-control" name="senha" value="<?= $dados['senha'] ?>" disabled>
 
-        <a href="index.php" class="btn btn-primary mt-3">Voltar</a>
+        <a href="lista_usuario.php" class="btn btn-primary mt-3">Voltar</a>
     </form>
 </body>
 
