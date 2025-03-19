@@ -72,7 +72,7 @@ $dados = $banco->query($select)->fetch();
 
             <div class="col">
                 <label class="form-label"></label>
-                <input type="number" placeholder="Telefone 2:" class="form-control" name="telefone_2" value="<?= $dados['telefone_2'] ?>"
+                <input type="number" placeholder="Telefone 2:" class="form-control" name="telefone_2" value="<?= $dados['telefone_2'] ?>" disabled>
             </div>
 
             <div class="col">
@@ -92,7 +92,7 @@ $dados = $banco->query($select)->fetch();
 
             <div class="col">
                 <label class="form-label"></label>
-                <input type="text" placeholder="Bairro:" class="form-control" name="bairro" value="<?= $dados['bairro'] ?>" disabled>
+                <input type="text" placeholder="Bairro:" class="form-control" name="bairro" value="<?= $dados['bairro'] ?>">
             </div>
         </div>
 
